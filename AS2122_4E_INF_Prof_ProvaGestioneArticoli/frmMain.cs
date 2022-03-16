@@ -44,6 +44,7 @@ namespace AS2122_4E_INF_Prof_ProvaGestioneArticoli
             }
         }
 
+        
         private void btnVisualizza_Click(object sender, EventArgs e)
         {
             lstElenco.Items.Clear();
@@ -52,7 +53,11 @@ namespace AS2122_4E_INF_Prof_ProvaGestioneArticoli
                 case "Visualizza articoli":
                     // TODO: (2) aggiungere visualizzazione articoli inseriti nella listbox
                     // ... lstElenco.Items.Add(a.Visualizzati()); 
-                    lstElenco.elenco
+                    lstElenco.Items.Clear();
+                    foreach (Articolo a in articoli)
+                    {
+                        lstElenco.Items.Add(a.Visualizzati());
+                    }
                     
                     break;
             }
